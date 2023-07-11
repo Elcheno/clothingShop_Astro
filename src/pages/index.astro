@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Landing-header.astro';
+import Carouser from '../components/Landing-carouser.astro';
+import Footer from '../components/Landing-footer.astro';
+---
+
+<Layout title="YOUProject">
+	<div class="wrapper">
+		<Header/>
+
+		<main class="main">
+
+			<Carouser img1="imagen1" img2="imagen2" img3="imagen3"/>
+			<Carouser img1="imagen5" img2="imagen6" img3="imagen7"/>
+			<Carouser img1="imagen8" img2="imagen9" img3="imagen10"/>
+			<Footer/>
+
+		</main>
+
+	</div>
+</Layout>

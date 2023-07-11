@@ -1,0 +1,257 @@
+.wrapper{
+    overflow: hidden;
+}
+
+.home-header{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+}
+
+.home-header .menu{
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.home-header .menu:hover{
+    cursor:pointer;
+}
+
+.home-header .logo a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: Italiana, -apple-system, serif;
+    font-size: 8rem;
+    letter-spacing: -15px;
+    transition: letter-spacing 0.4s;
+}
+
+.home-header .logo a span{
+    font-size: 7rem;
+    letter-spacing: -10px;
+    transition: letter-spacing 0.4s;
+}
+
+.home-header .logo:hover a{
+    letter-spacing: -16px;
+}
+
+.home-header .logo:hover span{
+    letter-spacing: -11px;
+}
+
+.home-header .nav{
+    width: 100%;
+}
+
+.home-header .nav ul{
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.home-header .nav ul li{
+    font-size: 1.5rem;
+    /*font-weight: bold;*/
+    margin-left: 2.5rem;
+}
+
+.home-header .nav ul li:hover{
+    cursor:pointer;
+}
+
+.home-header .nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.main{
+    z-index: 5;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main::-webkit-scrollbar{
+    width: 8px;
+    background-color: dimgrey;
+}
+
+.main::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 100px;
+}
+
+.child-container{
+    overflow: hidden;
+    scroll-snap-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.child-container img{
+    width: 110%;
+}
+
+.footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer main{
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+}
+
+.footer .home_newslater{
+    text-align: center;
+    font-family: "Century Gothic", -apple-system, serif;
+    margin: 2vh auto;
+}
+
+.footer .home_newslater p{
+    margin: 0;
+    font-size: 2rem;
+}
+
+.footer .home_newslater div{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.footer .home_newslater input{
+    width: 30vw;
+    height: 5vh;
+    padding-left: 1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid black;
+}
+
+.footer .home_newslater button{
+    background-color: black;
+    color: white;
+    height: 5vh;
+    padding: 0 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid black;
+}
+
+.footer .home_social-network{
+    font-family: Italiana, -apple-system, serif;
+    margin: 2vh auto;
+    width: 100%;
+
+}
+
+.footer .home_social-network ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer .home_social-network ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.footer .home_legal{
+    width: 65%;
+    justify-self: end;
+    margin-bottom: 1rem;
+}
+
+.footer .home_legal ul{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.footer .home_legal ul a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTON DE GITHUB(UIVERSE) */
+.git-btn {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.git-btn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(0, 0, 0, 0.8);
+    --animation-color: #000000;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.git-btn:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}

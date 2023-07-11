@@ -1,0 +1,39 @@
+---
+export interface Props {
+    img1:string;
+    img2:string;
+    img3:string;
+}
+let {img1, img2, img3} = Astro.props;
+---
+
+<section class="child-container">
+    <div id="carouselExampleInterval1" class="carousel slide w-100" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3500">
+                <picture>
+                    <source srcset={'/img/'+img1+'-desktop.jpg'} media="(min-width: 1024px)">
+                    <source srcset={'/img/'+img1+'-tablet.png'} media="(min-width: 768px)">
+                    <source srcset={'/img/'+img1+'-mobile.png'} media="(min-width: 360px)">
+                    <img src={'/img/'+img1+'-desktop.jpg'} class="d-block" alt="...">
+                </picture>
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+                <picture>
+                    <source srcset={'/img/'+img2+'-desktop.jpg'} media="(min-width: 1024px)">
+                    <source srcset={'/img/'+img2+'-tablet.png'} media="(min-width: 768px)">
+                    <source srcset={'/img/'+img2+'-mobile.png'} media="(min-width: 360px)">
+                    <img src={'/img/'+img2+'-desktop.jpg'} class="d-block" alt="...">
+                </picture>
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+                <picture>
+                    <source srcset={'/img/'+img3+'-desktop.jpg'} media="(min-width: 1024px)">
+                    <source srcset={'/img/'+img3+'-tablet.png'} media="(min-width: 768px)">
+                    <source srcset={'/img/'+img3+'-mobile.png'} media="(min-width: 360px)">
+                    <img src={'/img/'+img3+'-desktop.jpg'} class="d-block" alt="...">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
