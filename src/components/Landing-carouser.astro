@@ -11,6 +11,9 @@ let {img1, img2, img3} = Astro.props;
     <div id="carouselExampleInterval1" class="carousel slide w-100" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3500">
+                <div class="div-btn-carouser">
+                    <button class="btn-carouser">NEW SEASEON</button>
+                </div>
                 <picture>
                     <source srcset={'/img/'+img1+'-desktop.jpg'} media="(min-width: 1024px)">
                     <source srcset={'/img/'+img1+'-tablet.png'} media="(min-width: 768px)">
@@ -18,7 +21,10 @@ let {img1, img2, img3} = Astro.props;
                     <img src={'/img/'+img1+'-desktop.jpg'} class="d-block" alt="...">
                 </picture>
             </div>
-            <div class="carousel-item" data-bs-interval="3500">
+           <div class="carousel-item" data-bs-interval="3500">
+               <div class="div-btn-carouser">
+                   <button class="btn-carouser">NEW SEASEON</button>
+               </div>
                 <picture>
                     <source srcset={'/img/'+img2+'-desktop.jpg'} media="(min-width: 1024px)">
                     <source srcset={'/img/'+img2+'-tablet.png'} media="(min-width: 768px)">
@@ -27,6 +33,9 @@ let {img1, img2, img3} = Astro.props;
                 </picture>
             </div>
             <div class="carousel-item" data-bs-interval="3500">
+                <div class="div-btn-carouser">
+                    <button class="btn-carouser">NEW SEASEON</button>
+                </div>
                 <picture>
                     <source srcset={'/img/'+img3+'-desktop.jpg'} media="(min-width: 1024px)">
                     <source srcset={'/img/'+img3+'-tablet.png'} media="(min-width: 768px)">
