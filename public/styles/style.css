@@ -3,21 +3,49 @@
 }
 
 .home-header{
+    position: fixed;
+    z-index: 1;
     display: flex;
     flex-flow: row nowrap;
     width: 100vw;
-    position: fixed;
-    z-index: 1;
 }
 
 .home-header .menu{
-    font-size: 2.2rem;
-    padding: 1rem;
-    margin: 2rem;
+    background-color: transparent;
+    width: fit-content;
+    margin: 2vw 2vh;
 }
 
-.home-header .menu:hover{
-    cursor:pointer;
+.btn-nav-hamburguer{
+    z-index: 1;
+    box-shadow: none!important;
+}
+
+.btn-nav-hamburguer i{
+    font-size: 2rem;
+}
+
+.div-nav{
+    background-color: rgba(255, 255, 255, 0.7)!important;
+    backdrop-filter: blur(5px);
+}
+
+.nav-item{
+    transition: margin-left 0.2s;
+}
+
+.nav-item:hover{
+    margin-left: 1rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.btn-mobile{
+    display: none;
 }
 
 .home-header .logo a{
@@ -60,8 +88,8 @@
 
 .home-header .nav ul li{
     font-size: 1.5rem;
-    /*font-weight: bold;*/
-    margin-left: 2.5rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
 }
 
 .home-header .nav ul li:hover{
@@ -71,6 +99,15 @@
 .home-header .nav ul li a{
     color: black;
     text-decoration: none;
+}
+
+.btn-nav{
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.btn-nav:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .main{
@@ -175,6 +212,10 @@
     font-weight: bold;
 }
 
+.footer .home_social-network ul li a:hover{
+    text-decoration: underline;
+}
+
 .footer .home_legal{
     width: 65%;
     justify-self: end;
@@ -195,7 +236,9 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
-
+.footer .home_legal ul a:hover{
+    text-decoration: underline;
+}
 
 
 
