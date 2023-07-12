@@ -45,21 +45,15 @@
     font-family: "Century Gothic", -apple-system, serif;
 }
 
-.btn-mobile{
-    display: none;
-}
-
 .home-header .logo a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.9);
     font-family: Italiana, -apple-system, serif;
-    font-size: 8rem;
     letter-spacing: -15px;
     transition: letter-spacing 0.4s;
 }
 
 .home-header .logo a span{
-    font-size: 7rem;
     letter-spacing: -10px;
     transition: letter-spacing 0.4s;
 }
@@ -72,33 +66,31 @@
     letter-spacing: -11px;
 }
 
-.home-header .nav{
+.home-header .nav-bar{
     width: 100%;
 }
 
-.home-header .nav ul{
+.home-header .nav-bar ul{
     list-style-type: none;
     height: 100%;
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: end;
     align-items: center;
-    margin-right: 5rem;
 }
 
-.home-header .nav ul li{
+.home-header .nav-bar ul li{
     font-size: 1.5rem;
     margin-left: 2rem;
     padding: 0.5rem;
     font-family: "Century Gothic", -apple-system, serif;
 }
 
-.home-header .nav ul li:hover{
+.home-header .nav-bar ul li:hover{
     cursor:pointer;
 }
 
-.home-header .nav ul li a{
+.home-header .nav-bar ul li a{
     color: black;
     text-decoration: none;
 }
@@ -143,7 +135,7 @@
 }
 
 .div-btn-carouser{
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: 70%;
     width: 100%;
@@ -196,10 +188,10 @@
 .footer .home_newslater div{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .footer .home_newslater input{
-    width: 30vw;
     height: 5vh;
     padding-left: 1rem;
     border-top-left-radius: 5px;
@@ -227,9 +219,10 @@
 .footer .home_social-network ul{
     list-style-type: none;
     display: flex;
-    flex-flow: row nowrap;
     width: 100%;
     justify-content: space-evenly;
+    text-align: center;
+    padding: 0;
 }
 
 .footer .home_social-network ul li a{
@@ -256,6 +249,8 @@
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 0;
+    text-align: center;
+    padding: 0;
 }
 
 .footer .home_legal ul a{
@@ -284,7 +279,7 @@
     --fs-size: 2em;
     letter-spacing: 3px;
     text-decoration: none;
-    font-family: "Arial";
+    font-family: "Century Gothic", -apple-system, serif;
     position: relative;
     text-transform: uppercase;
     -webkit-text-stroke: 1px var(--text-stroke-color);
@@ -312,13 +307,69 @@
 /* ----------- MEDIA QUERYS ----------- */
 
 @media only screen and (min-width: 360px){
+    .nav-bar{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+    }
+    .logo a{
+        font-size: 4.5rem;
+    }
 
+    .logo a span{
+        font-size: 3.5rem;
+        letter-spacing: -5px;
+    }
+
+    .footer .home_newslater input {
+        width: 50vw;
+    }
+
+    .footer .home_social-network ul {
+        flex-flow: column;
+    }
 }
 
 @media only screen and (min-width: 768px){
+    .nav-bar{
+        display: flex;
+    }
 
+    .nav-bar ul{
+        flex-flow: column;
+    }
+
+    .btn-mobile{
+        display: none;
+    }
+    .logo a{
+        font-size: 7.5rem;
+    }
+
+    .logo a span{
+        font-size: 6rem;
+    }
 }
 
 @media only screen and (min-width: 1024px){
-    
+    .logo a{
+        font-size: 8rem;
+    }
+
+    .logo a span{
+        font-size: 7rem;
+    }
+
+    .nav-bar ul{
+        flex-flow: row nowrap;
+        margin-right: 5rem;
+    }
+    .footer .home_newslater input {
+        width: 30vw;
+    }
+
+    .footer .home_social-network ul {
+        flex-flow: row nowrap;
+    }
 }
