@@ -1,3 +1,16 @@
+*,::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Italiana;
+    src: url('../fonts/Italiana-Regular.ttf');
+}
+html{
+    font-family: "Century Gothic", -apple-system, serif;
+}
+
 .wrapper{
     overflow: hidden;
 }
@@ -144,6 +157,7 @@
 }
 
 .btn-carouser{
+    color: black;
     background-color: rgba(255,255,255,0.4);
     backdrop-filter: blur(2px);
     border: none;
@@ -264,6 +278,7 @@
 
 /* BOTON DE GITHUB(UIVERSE) */
 .git-btn {
+    color: black;
     margin: 0;
     height: auto;
     background: transparent;
