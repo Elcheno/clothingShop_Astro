@@ -148,7 +148,6 @@ html{
 }
 
 .div-btn-carouser{
-    z-index: 3;
     position: absolute;
     top: 70%;
     width: 100%;
