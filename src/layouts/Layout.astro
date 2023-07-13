@@ -1,8 +1,9 @@
 ---
 export interface Props {
 	title: string;
+	stylesheet?: string;
 }
-const { title } = Astro.props;
+const { title, stylesheet } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="./img/icons/logoSimple.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href={'./styles/style-'+stylesheet+'.css'} />
 		<script src="https://kit.fontawesome.com/5cc499f238.js" crossorigin="anonymous"></script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	</head>

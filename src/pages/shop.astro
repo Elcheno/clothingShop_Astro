@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+
+
+const data = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=30').then(res => res.json())
+
+---
+
+<Layout stylesheet="shop" title="YOUProject - ASTRO">
+
+    <ul>
+        {
+            data.map((item) => (<li>{item.title}</li>))
+        }
+    </ul>
+
+</Layout>
