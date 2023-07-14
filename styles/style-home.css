@@ -1,0 +1,144 @@
+.wrapper{
+    overflow: hidden;
+}
+
+
+
+.main{
+    z-index: 5;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main::-webkit-scrollbar{
+    width: 8px;
+    background-color: dimgrey;
+}
+
+.main::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 100px;
+}
+
+.child-container{
+    overflow: hidden;
+    scroll-snap-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.child-container img{
+    width: 110%;
+}
+
+.div-btn-carouser{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-carouser{
+    color: black;
+    background-color: rgba(255,255,255,0.4);
+    backdrop-filter: blur(2px);
+    border: none;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    font-family: 'Century Gothic', -apple-system, serif;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+
+.btn-carouser:hover{
+    background-color: white;
+    font-weight: bold;
+}
+
+
+/* ----------- MEDIA QUERYS ----------- */
+
+@media only screen and (min-width: 360px){
+    .nav-bar{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+    }
+    .logo a{
+        font-size: 4.5rem;
+    }
+
+    .logo a span{
+        font-size: 3.5rem;
+        letter-spacing: -5px;
+    }
+
+    .div-btn-carouser{
+        top: 55%;
+    }
+
+    .footer .home_newslater input {
+        width: 50vw;
+    }
+
+    .footer .home_social-network ul {
+        flex-flow: column;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .nav-bar{
+        display: flex;
+    }
+
+    .nav-bar ul{
+        flex-flow: column;
+    }
+
+    .btn-mobile{
+        display: none;
+    }
+
+    .div-btn-carouser{
+        top: 65%;
+    }
+
+    .logo a{
+        font-size: 7.5rem;
+    }
+
+    .logo a span{
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .logo a{
+        font-size: 8rem;
+    }
+
+    .logo a span{
+        font-size: 7rem;
+    }
+
+    .nav-bar ul{
+        flex-flow: row nowrap;
+        margin-right: 5rem;
+    }
+
+    .div-btn-carouser{
+        top: 70%;
+    }
+
+    .footer .home_newslater input {
+        width: 30vw;
+    }
+
+    .footer .home_social-network ul {
+        flex-flow: row nowrap;
+    }
+}
