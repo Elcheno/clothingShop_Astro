@@ -1,0 +1,88 @@
+---
+export interface Props {
+    src: string;
+    title: string;
+    price: number;
+}
+
+const { src , title , price} = Astro.props;
+---
+    <article class="item" >
+        <div class="item-img">
+            <img src={src} alt="..." width="250vw" onclick="getFullscreen(this)">
+        </div>
+
+        <div class="item-title">
+            <span>{title}</span>
+        </div>
+
+        <div class="item-price">
+            <span>{price+' $'}</span>
+        </div>
+    </article>
+
+
+<script is:inline>
+    function getFullscreen(element){
+    if(element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if(element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if(element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+}
+</script>
+
+
+
+
+
+
+<style>
+    .item{
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+        transition: transform 0.2s;
+        width: min-content;
+        font-family: "Century Gothic", -apple-system, serif;
+    }
+
+    .item:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .parent-div{
+        background-color: #ffffff;
+        display: flex;
+        flex-flow: column;
+        padding: 2rem;
+        height: auto;
+        width: min-content;
+        transition: transform 0.2s;
+    }
+
+    .contenedor h3{
+        text-align: center;
+    }
+
+    img{
+        border-radius: 5px;
+    }
+
+    .item-title{
+        font-size: 1.4rem;
+        text-align: center;
+
+    }
+
+    .item-price{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+</style>
