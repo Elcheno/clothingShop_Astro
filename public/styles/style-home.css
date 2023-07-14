@@ -1,121 +1,8 @@
-*,::after,*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-@font-face {
-    font-family: Italiana;
-    src: url('../fonts/Italiana-Regular.ttf');
-}
-html{
-    font-family: "Century Gothic", -apple-system, serif;
-}
-
 .wrapper{
     overflow: hidden;
 }
 
-.home-header{
-    position: fixed;
-    z-index: 1;
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100vw;
-}
 
-.home-header .menu{
-    background-color: transparent;
-    width: fit-content;
-    margin: 2vw 2vh;
-}
-
-.btn-nav-hamburguer{
-    z-index: 1;
-    box-shadow: none!important;
-}
-
-.btn-nav-hamburguer i{
-    font-size: 2rem;
-}
-
-.div-nav{
-    background-color: rgba(255, 255, 255, 0.7)!important;
-    backdrop-filter: blur(5px);
-}
-
-.nav-item{
-    transition: margin-left 0.2s;
-}
-
-.nav-item:hover{
-    margin-left: 1rem;
-}
-
-.nav-item a{
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    font-family: "Century Gothic", -apple-system, serif;
-}
-
-.home-header .logo a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.9);
-    font-family: Italiana, -apple-system, serif;
-    letter-spacing: -15px;
-    transition: letter-spacing 0.4s;
-}
-
-.home-header .logo a span{
-    letter-spacing: -10px;
-    transition: letter-spacing 0.4s;
-}
-
-.home-header .logo:hover a{
-    letter-spacing: -16px;
-}
-
-.home-header .logo:hover span{
-    letter-spacing: -11px;
-}
-
-.home-header .nav-bar{
-    width: 100%;
-}
-
-.home-header .nav-bar ul{
-    list-style-type: none;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-.home-header .nav-bar ul li{
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    padding: 0.5rem;
-    font-family: "Century Gothic", -apple-system, serif;
-}
-
-.home-header .nav-bar ul li:hover{
-    cursor:pointer;
-}
-
-.home-header .nav-bar ul li a{
-    color: black;
-    text-decoration: none;
-}
-
-.btn-nav{
-    border-radius: 6px;
-    transition: background-color 0.3s;
-}
-
-.btn-nav:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
 
 .main{
     z-index: 5;
@@ -149,7 +36,6 @@ html{
 
 .div-btn-carouser{
     position: absolute;
-    top: 70%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -172,151 +58,6 @@ html{
     font-weight: bold;
 }
 
-.footer{
-    display: flex;
-    flex-flow: column;
-    justify-content: end;
-    align-items: center;
-}
-
-.footer main{
-    display: flex;
-    flex-flow: column;
-    height: 80%;
-    width: 80%;
-    justify-content: center;
-}
-
-.footer .home_newslater{
-    text-align: center;
-    font-family: "Century Gothic", -apple-system, serif;
-    margin: 2vh auto;
-}
-
-.footer .home_newslater p{
-    margin: 0;
-    font-size: 2rem;
-}
-
-.footer .home_newslater div{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.footer .home_newslater input{
-    height: 5vh;
-    padding-left: 1rem;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: 2px solid black;
-}
-
-.footer .home_newslater button{
-    background-color: black;
-    color: white;
-    height: 5vh;
-    padding: 0 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: 2px solid black;
-}
-
-.footer .home_social-network{
-    font-family: Italiana, -apple-system, serif;
-    margin: 2vh auto;
-    width: 100%;
-
-}
-
-.footer .home_social-network ul{
-    list-style-type: none;
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 0;
-}
-
-.footer .home_social-network ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.footer .home_social-network ul li a:hover{
-    text-decoration: underline;
-}
-
-.footer .home_legal{
-    width: 65%;
-    justify-self: end;
-    margin-bottom: 1rem;
-}
-
-.footer .home_legal ul{
-    list-style-type: none;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-}
-
-.footer .home_legal ul a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.footer .home_legal ul a:hover{
-    text-decoration: underline;
-}
-
-/* BOTON DE GITHUB(UIVERSE) */
-.git-btn {
-    color: black;
-    margin: 0;
-    height: auto;
-    background: transparent;
-    padding: 0;
-    border: none;
-    font-size: 1.5rem;
-}
-
-.git-btn {
-    --border-right: 6px;
-    --text-stroke-color: rgba(0, 0, 0, 0.8);
-    --animation-color: #000000;
-    --fs-size: 2em;
-    letter-spacing: 3px;
-    text-decoration: none;
-    font-family: "Century Gothic", -apple-system, serif;
-    position: relative;
-    text-transform: uppercase;
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-
-.hover-text {
-    position: absolute;
-    box-sizing: border-box;
-    content: attr(data-text);
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color);
-}
-
-.git-btn:hover .hover-text {
-    width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color))
-}
-
 
 /* ----------- MEDIA QUERYS ----------- */
 
@@ -334,6 +75,10 @@ html{
     .logo a span{
         font-size: 3.5rem;
         letter-spacing: -5px;
+    }
+
+    .div-btn-carouser{
+        top: 55%;
     }
 
     .footer .home_newslater input {
@@ -357,6 +102,11 @@ html{
     .btn-mobile{
         display: none;
     }
+
+    .div-btn-carouser{
+        top: 65%;
+    }
+
     .logo a{
         font-size: 7.5rem;
     }
@@ -379,6 +129,11 @@ html{
         flex-flow: row nowrap;
         margin-right: 5rem;
     }
+
+    .div-btn-carouser{
+        top: 70%;
+    }
+
     .footer .home_newslater input {
         width: 30vw;
     }

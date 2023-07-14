@@ -1,18 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Landing-header.astro';
+import ListItems from '../components/Landing-listItems.astro';
+import Footer from '../components/Landing-footer.astro';
 
-
-
-const data = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=30').then(res => res.json())
-
+const data = await fetch('https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=0&limit=20').then(res => res.json())
 ---
 
 <Layout stylesheet="shop" title="YOUProject - ASTRO">
 
-    <ul>
-        {
-            data.map((item) => (<li>{item.title}</li>))
-        }
-    </ul>
+    <div class="wrapper">
+        <Header root="shop"/>
+
+        <main>
+            <div class="listItems-div">
+                {
+                    data.map((item) => (
+                            <ListItems
+                                    src={item.images}
+                                    title={item.title}
+                                    price={item.price}
+                            />
+                    ))
+                }
+            </div>
+
+            <Footer/>
+        </main>
+
+    </div>
 
 </Layout>
+
+<style>
+
+    main{
+        z-index: 5;
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        width: 100vw;
+    }
+    main > *{
+        height: 100vh;
+    }
+
+
+
+
+    .listItems-div{
+        width: 85vw;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-top: 25vh;
+        gap: 2rem;
+        overflow: scroll;
+    }
+
+    .listItems-div::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .listItems-div::-webkit-scrollbar-thumb{
+        width: 0;
+    }
+
+</style>
